@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Julia Marques Gomes</title><link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css' /><link href='https://fonts.googleapis.com/css?family=Raleway:600,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>JULIA MARQUES GOMES</title><link href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -97,7 +97,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
@@ -141,7 +141,7 @@ a.md-print-anchor { white-space: pre !important; border-width: initial !importan
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
@@ -153,30 +153,155 @@ mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 
 
-@include-when-export url(https://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic);
-@include-when-export url(https://fonts.googleapis.com/css?family=Raleway:600,400&subset=latin,latin-ext);
+/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
 
-;
+@include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
+
+/* =========== */
+
 :root {
-	--window-border: none;
-	--typora-center-window-title: true;
-	--active-file-bg-color: #f3f3f3;
-	--bg-color: #fcfcfc;
-	--control-text-color: #777;
+	--active-file-bg-color: #dadada;
+	--active-file-bg-color: rgba(32, 43, 51, 0.63);
+	--active-file-text-color: white;
+	--bg-color: #f3f2ee;
+	--text-color: #1f0909;
+	--control-text-color: #444;
+	--rawblock-edit-panel-bd: #e5e5e5;
+
+	--select-text-bg-color: rgba(32, 43, 51, 0.63);
+  --select-text-font-color: white;
 }
 
-.mac-seamless-mode #typora-sidebar {
-	top: var(--mac-title-bar-height);
-	padding-top: 0;
-	height: auto;
+pre {
+	--select-text-bg-color: #36284e;
+	--select-text-font-color: #fff;
 }
 
-html,
-body,
-#write{
-	background: #fcfcfc;
-	font-family: 'TeXGyreAdventor', "Century Gothic", 'Yu Gothic', 'Raleway', "STHeiti", sans-serif;
-	font-weight: 300;
+html {
+	font-size: 16px;
+}
+
+html, body {
+	background-color: #f3f2ee;
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+	color: #1f0909;
+	line-height: 1.5em;
+}
+
+/*#write {
+	overflow-x: auto;
+    max-width: initial;
+	padding-left: calc(50% - 17em);
+    padding-right: calc(50% - 17em);
+}
+
+@media (max-width: 36em) {
+ 	#write {
+ 		padding-left: 1em;
+    	padding-right: 1em;
+ 	}
+}*/
+
+#write {
+	max-width: 40em;
+}
+
+ol li {
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+ul li {
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* styles */
+
+/* ====== */
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.875em;
+	/*30 / 16*/
+	line-height: 1.6em;
+	/* 48 / 30*/
+	margin-top: 2em;
+}
+h2,
+h3 {
+	font-size: 1.3125em;
+	/*21 / 16*/
+	line-height: 1.15;
+	/*24 / 21*/
+	margin-top: 2.285714em;
+	/*48 / 21*/
+	margin-bottom: 1.15em;
+	/*24 / 21*/
+}
+h3 {
+	font-weight: normal;
+}
+h4 {
+	font-size: 1.125em;
+	/*18 / 16*/
+	margin-top: 2.67em;
+	/*48 / 18*/
+}
+h5,
+h6 {
+	font-size: 1em;
+	/*16*/
+}
+h1 {
+	border-bottom: 1px solid;
+	margin-bottom: 1.875em;
+	padding-bottom: 0.8125em;
+}
+/* links */
+
+a {
+	text-decoration: none;
+	color: #065588;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+/* block spacing */
+
+p,
+blockquote,
+.md-fences {
+	margin-bottom: 1.5em;
 }
 h1,
 h2,
@@ -184,351 +309,421 @@ h3,
 h4,
 h5,
 h6 {
-	color: #111;
-	font-family: 'TeXGyreAdventor', "Century Gothic", 'Yu Gothic', 'Ubuntu', "STHeiti", sans-serif;
+	margin-bottom: 1.5em;
 }
-
-html {
-	font-size:16px;
-}
-
-#write {
-	max-width: 914px;
-	text-align: justify;
-}
-
-#write>h1:first-child {
-	margin-top: 2.75rem;
-}
-#write>h2:first-child {
-	margin-top: 1.75rem;
-}
-#write>h3:first-child {
-	margin-top: 1rem;
-}
-#write>h4:first-child {
-	margin-top: 0.5rem;
-}
-h1 {
-	font-weight: normal;
-	line-height: 4rem;
-	margin: 0 0 1.75rem;
-	padding: 20px 30px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 4rem;
-}
-h2 {
-	font-weight: normal;
-	line-height: 3rem;
-	margin: 0 0 1.9375rem;
-	padding: 0 30px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 3rem
-}
-h3 {
-	font-weight: normal;
-}
-h4 {
-	font-weight: normal;
-}
-h5 {
-	font-size: 1.125rem;
-	font-weight: normal;
-}
-h6 {
-	font-size: 1rem;
-	font-weight: bold;
-}
-p {
-	color: #111;
-	font-size: 1rem;
-	line-height: 1.75rem;
-	margin: 0 0 1.25rem;
-}
-#write>h3.md-focus:before {
-	left: -1.875rem;
-	top: 0.5rem;
-	padding: 2px;
-}
-#write>h4.md-focus:before {
-	left: -1.875rem;
-	top: 0.3125rem;
-	padding: 2px;
-}
-#write>h5.md-focus:before {
-	left: -1.875rem;
-	top: 0.25rem;
-	padding: 2px;
-}
-#write>h6.md-focus:before {
-	left: -1.875rem;
-	top: .125rem;
-	padding: 2px;
-}
-/*@media screen and (min-width: 48em) {
-	.h1,
-	h1 {
-		font-size: 3.250rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.298rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.625rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.250rem;
-	}
-	.h5,
-	h5 {
-		font-size: 1.150rem;
-	}
-	.h6,
-	h6 {
-		font-size: 1rem;
-	}
-	#write>h4.md-focus:before,
-	#write>h5.md-focus:before,
-	#write>h6.md-focus:before {
-		top: 1px;
-	}
-	p {
-		font-size: 1.25rem;
-		line-height: 1.8;
-	}
-	table {
-		font-size: 1.25rem;
-	}
-}*/
-@media screen and (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.250rem;
-	}
-	.h5,
-	h5 {
-		font-size: 1.150rem;
-	}
-	.h6,
-	h6 {
-		font-size: 1rem;
-	}
-}
-a,
-.md-def-url {
-	color: #990000;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-table {
-	margin-bottom: 20px
-}
-table th,
-table td {
-	padding: 8px;
-	line-height: 1.25rem;
-	vertical-align: top;
-	border-top: 1px solid #ddd
-}
-table th {
-	font-weight: bold
-}
-table thead th {
-	vertical-align: bottom
-}
-table caption+thead tr:first-child th,
-table caption+thead tr:first-child td,
-table colgroup+thead tr:first-child th,
-table colgroup+thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-	border-top: 0
-}
-table tbody+tbody {
-	border-top: 2px solid #ddd
-}
-code, .md-fences {
-	padding: .5em;
-	/*background: #f0f0f0;*/
-	border: 1px solid #ccc;
-	padding: .1em;
-	font-size: 0.9em;
-	margin-left: 0.2em;
-	margin-right: 0.2em;
-}
-.md-fences {
-	margin: 0 0 20px;
-	font-size: 1em;
-	padding: 0.3em 1em;
-  	padding-top: 0.4em;
-}
-.task-list{
-	padding-left: 0;
-}
-
-.task-list-item {
-	padding-left:2.125rem;
-}
-
-.task-list-item input {
-	top: 3px;
-
-}
-
-.task-list-item input:before {
-	content: "";
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	vertical-align: middle;
-	text-align: center;
-	border: 1px solid gray;
-	background-color: #fdfdfd;
-	margin-left: 0;
-	margin-top: -0.8rem;
-}
-.task-list-item input:checked:before,
-.task-list-item input[checked]:before{
-	content: '\25FC';
-	/*◘*/
-	font-size: 0.8125rem;
-	line-height: 0.9375rem;
-	margin-top: -1rem;
-}
-
-/* Chrome 29+ */
-@media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
-    .task-list-item input:before {
-    	margin-top: -0.2rem;
-    }
-
-    .task-list-item input:checked:before,
-	.task-list-item input[checked]:before {
-		margin-top: -0.2rem;
-	}
-}
+/* blockquote */
 
 blockquote {
-	margin: 0 0 1.11111rem;
-	padding: 0.5rem 1.11111rem 0 1.05556rem;
-	border-left: 1px solid gray;
+	font-style: italic;
+	border-left: 5px solid;
+	margin-left: 2em;
+	padding-left: 1em;
 }
-blockquote,
-blockquote p {
-	line-height: 1.6;
-	color: #6f6f6f;
+/* lists */
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
 }
-#write pre.md-meta-block {
-	min-height: 30px;
-	background: #f8f8f8;
-	padding: 1.5em;
-	font-weight: 300;
+/* tables */
+.md-meta,.md-before, .md-after {
+	color:#999;
+}
+
+table {
+	margin-bottom: 1.5em;
+	/*24 / 16*/
 	font-size: 1em;
-	padding-bottom: 1.5em;
-	padding-top: 3em;
-    margin-top: -1.5em;
-	color: #999;
-	
-	width: 100vw;
-	max-width: calc(100% + 60px);
-	margin-left: -30px;
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
+	/* width: 100%; */
 }
-.MathJax_Display {
-	font-size: 0.9em;
-	margin-top: 0.5em;
+thead th,
+tfoot th {
+	padding: .25em .25em .25em .4em;
+	text-transform: uppercase;
+}
+th {
+	text-align: left;
+}
+td {
+	vertical-align: top;
+	padding: .25em .25em .25em .4em;
+}
+
+code,
+.md-fences {
+	background-color: #dadada;
+}
+
+code {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.md-fences {
+	margin-left: 2em;
+	margin-bottom: 3em;
+	padding-left: 1ch;
+	padding-right: 1ch;
+}
+
+pre,
+code,
+tt {
+	font-size: .875em;
+	line-height: 1.714285em;
+}
+/* some fixes */
+
+h1 {
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-bottom: 0.5em;
+}
+
+p + ul,
+p + ol{
+	margin-top: .5em;
+}
+
+h3 + ul,
+h4 + ul,
+h5 + ul,
+h6 + ul,
+h3 + ol,
+h4 + ol,
+h5 + ol,
+h6 + ol {
+	margin-top: .5em;
+}
+
+li > ul,
+li > ol {
+	margin-top: inherit;
 	margin-bottom: 0;
 }
-p.mathjax-block,
-.mathjax-block {
-	padding-bottom: 0;
-}
-.mathjax-block>.code-tooltip {
-	bottom: 5px;
-	box-shadow: none;
-}
-.md-image>.md-meta {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-}
-.md-image>img {
-	margin-top: 2px;
-}
-.md-image>.md-meta:first-of-type:before {
-	padding-left: 4px;
+
+li ol>li {
+	list-style-type: lower-alpha;
 }
 
-#typora-source {
+li li ol>li{
+	list-style-type: lower-roman;
+}
+
+h2,
+h3 {
+	margin-bottom: .75em;
+}
+hr {
+	border-top: none;
+	border-right: none;
+	border-bottom: 1px solid;
+	border-left: none;
+}
+h1 {
+	border-color: #c5c5c5;
+}
+blockquote {
+	border-color: #bababa;
+	color: #656565;
+}
+
+blockquote ul,
+blockquote ol {
+	margin-left:0;
+}
+
+.ty-table-edit {
+	background-color: transparent;
+}
+thead {
+	background-color: #dadada;
+}
+tr:nth-child(even) {
+	background: #e8e7e7;
+}
+hr {
+	border-color: #c5c5c5;
+}
+.task-list{
+	padding-left: 1rem;
+}
+
+.md-task-list-item {
+	padding-left: 1.5rem;
+	list-style-type: none;
+}
+
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.25rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #F3F2EE;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	color: inherit;
+}
+
+#write pre.md-meta-block {
+	min-height: 1.875rem;
 	color: #555;
+	border: 0px;
+	background: transparent;
+	margin-top: -4px;
+	margin-left: 1em;
+	margin-top: 1em;
 }
 
-/** ui for windows **/
-#md-searchpanel {
-    border-bottom: 1px solid #ccc;
+.md-image>.md-meta {
+	color: #9B5146;
 }
 
-#md-searchpanel .btn {
-    border: 1px solid #ccc;
+.md-image>.md-meta{
+	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
 }
 
-#md-notification:before {
-	top: 14px;
+
+#write>h3.md-focus:before{
+	left: -1.5rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h4.md-focus:before{
+	left: -1.5rem;
+	top: .25rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h5.md-focus:before{
+	left: -1.5rem;
+	top: .0.3125rem;
+	color:#999;
+	border-color:#999;
+}
+#write>h6.md-focus:before{
+	left: -1.5rem;
+	top: 0.3125rem;
+	color:#999;
+	border-color:#999;
 }
 
-#md-notification {
-	background: #eee;
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
 }
 
-.megamenu-menu-panel .btn {
-	border: 1px solid #ccc;
+.md-toc-content:empty:before{
+	color: #065588;
+}
+.md-toc-item {
+	color: #065588;
+}
+#write div.md-toc-tooltip {
+	background-color: #f3f2ee;
 }
 
 #typora-sidebar {
-	box-shadow: none;
+	background-color: #f3f2ee;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
 }
 
-.file-list-item ,
-.show-folder-name .file-list-item {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	line-height: 20px;
+.pin-outline #typora-sidebar {
+	background: inherit;
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+.pin-outline #typora-sidebar:hover .outline-title-wrapper {
+	border-left:1px dashed;
+}
+
+.outline-item:hover {
+  background-color: #dadada;
+  border-left: 28px solid #dadada;
+  border-right: 18px solid #dadada;
+}
+
+.typora-node .outline-item:hover {
+  	border-right: 28px solid #dadada;
+}
+
+.outline-expander:before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size:14px;
+  top: 1px;
+}
+
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  content: "\f0d7";
+}
+
+.modal-content {
+	background-color: #f3f2ee;
+}
+
+.auto-suggest-container ul li {
+	list-style-type: none;
+}
+
+/** UI for electron */
+
+.megamenu-menu,
+#top-titlebar, #top-titlebar *,
+.megamenu-content {
+	background: #f3f2ee;
+	color: #1f0909;
+}
+
+.megamenu-menu-header {
+	border-bottom: 1px dashed #202B33;
+}
+
+.megamenu-menu {
+	box-shadow: none;
+	border-right: 1px dashed;
+}
+
+header, .context-menu, .megamenu-content, footer {
+	font-family: "PT Serif", 'Times New Roman', Times, serif;
+    color: #1f0909;
+}
+
+#megamenu-back-btn {
+	color: #1f0909;
+	border-color: #1f0909;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title:before {
+	color: #1f0909;
+}
+
+.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
+	color: inherit;
+	background-color: #e8e7df;
+}
+
+.long-btn:hover {
+	background-color: #e8e7df;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+	background-color: #D2D1D1;
+}
+
+.btn-default {
+	background-color: transparent;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+.ty-show-word-count #footer-word-count {
+	background: #c7c5c5;
+}
+
+#typora-quick-open {
+    background-color: inherit;
+}
+
+.md-diagram-panel {
+	margin-top: 8px;
+}
+
+.file-list-item-file-name {
+	font-weight: initial;
 }
 
 .file-list-item-summary {
-	height: 40px;
-	line-height: 20px;
+	opacity: 1;
+}
+
+.file-list-item {
+	color: #777;
+}
+
+.file-list-item.active {
+	background-color: inherit;
+	color: black;
+}
+
+.ty-side-sort-btn.active {
+	background-color: inherit;
+}
+
+.file-list-item.active .file-list-item-file-name  {
+	font-weight: bold;
+}
+
+.file-list-item{
+    opacity:1 !important;
+}
+
+.file-library-node.active>.file-node-background{
+	background-color: rgba(32, 43, 51, 0.63);
+	background-color: var(--active-file-bg-color);
+}
+
+.file-tree-node.active>.file-node-content{
+	color: white;
+	color: var(--active-file-text-color);
+}
+
+.md-task-list-item>input {
+	margin-left: -1.7em;
+	margin-top: calc(1rem - 12px);
+}
+
+input {
+	border: 1px solid #aaa;
+}
+
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:hover, 
+.megamenu-menu-header:focus {
+	color: inherit;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+/* https://github.com/typora/typora-issues/issues/2046 */
+.os-windows-7 strong,
+.os-windows-7 strong  {
+	font-weight: 760;
+}
+
+.ty-preferences .btn-default {
+	background: transparent;
+}
+
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
 }
 
  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name="julia-marques-gomes" class="md-header-anchor"></a><span>Julia Marques Gomes</span></h1><p>🏠<span> Maringá - Pr</span></p><p>📧<span> </span><a href='mailto:juliamarquesg29@gmail.com' target='_blank' class='url'>juliamarquesg29@gmail.com</a><span> </span><span>																			</span></p><p>📱<span> +55 44 9 9802 5935</span></p><p>🔗<span> </span><a href='https://www.linkedin.com/in/juliamaques/'><span>Linkedin</span></a></p><hr /><h2><a name="formação" class="md-header-anchor"></a><span>Formação</span></h2><h3><a name="pós-graduação-em-engenharia-de-software" class="md-header-anchor"></a><span>Pós Graduação em Engenharia de Software</span></h3><p><em><span>PUC Minas - EAD</span></em><span> | </span><em><span>Previsão de Conclusão: Julho/2021</span></em></p><p>&nbsp;</p><h3><a name="bacharel-em-engenharia-elétrica" class="md-header-anchor"></a><span>Bacharel em Engenharia Elétrica</span></h3><p><em><span>Centro Universitário Ingá - Uningá - Maringá</span></em><span> | </span><em><span>Conclusão: Dezembro/2019</span></em></p><p>&nbsp;</p><h3><a name="curso-técnico-em-mecatrônica" class="md-header-anchor"></a><span>Curso Técnico em Mecatrônica</span></h3><p><em><span>SENAI - CTM - Maringá</span></em><span> | </span><em><span>Conclusão: Novembro/2014</span></em></p><hr /><h2><a name="experiência-profissional" class="md-header-anchor"></a><span>Experiência Profissional</span></h2><h3><a name="analista-de-negócios" class="md-header-anchor"></a><span>Analista de Negócios</span></h3><h4><a name="db1-group--agosto2018-até-o-momento" class="md-header-anchor"></a><span>DB1 Group | Agosto/2018 até o momento</span></h4><p><strong><span>Principais atividades:</span></strong><span> Definir e validar soluções que satisfaçam as necessidades de negócio, metas e objetivos do cliente e empresa; elicitação e gerenciamento de requisitos; avaliação e validação da solução.</span></p><p>&nbsp;</p><h3><a name="técnica-em-eletrônica" class="md-header-anchor"></a><span>Técnica em Eletrônica</span></h3><h4><a name="digipower-chip-performance--junho2017-a-agosto2018" class="md-header-anchor"></a><span>Digipower Chip Performance | Junho/2017 a Agosto/2018</span></h4><p><strong><span>Principais atividades:</span></strong><span> Atualização e desenvolvimento de produtos de performance automotiva; auxiliar de produção; contato com fornecedores; elicitação de requisitos para aplicativos mobile; gerenciamento de projetos; testes de aplicativos mobile.</span></p><p>&nbsp;</p><h3><a name="auxiliar-de-escritório" class="md-header-anchor"></a><span>Auxiliar de escritório</span></h3><h4><a name="eugenio--marques-ltda--nov2013-a-fev2017" class="md-header-anchor"></a><span>Eugenio &amp; Marques LTDA | Nov/2013 a Fev/2017</span></h4><p><strong><span>Principais atividades:</span></strong><span> Balanço patrimonial, orçamentos, organização de agenda e contato com clientes.  </span></p><hr /><h2><a name="idiomas" class="md-header-anchor"></a><span>Idiomas</span></h2><p><strong><span>Português</span></strong><span>| Nativo</span></p><p><strong><span>Inglês</span></strong><span> | Fluente</span></p><p><strong><span>Espanhol</span></strong><span>| Básico</span></p><p>&nbsp;</p><p>&nbsp;</p></div>
+<div  id='write'  class = 'is-node'><h1><a name="julia-marques-gomes" class="md-header-anchor"></a><span>JULIA MARQUES GOMES</span></h1><p><span>ð  MaringÃ¡ - Pr</span></p><p><span>ð§ </span><a href='mailto:juliamarquesg29@gmail.com'><span>juliamarquesg29@gmail.com</span></a></p><p><span>ð± +55 44 9 9802 5935</span></p><p><span>ð </span><a href='https://www.linkedin.com/in/juliamaques/'><span>Linkedin</span></a></p><hr /><h2><a name="formaÃ§Ã£o" class="md-header-anchor"></a><span>FORMAÃÃO</span></h2><h3><a name="pÃ³s-graduaÃ§Ã£o-em-engenharia-de-software" class="md-header-anchor"></a><span>PÃ³s GraduaÃ§Ã£o em Engenharia de Software</span></h3><p><em><span>PUC Minas - EAD</span></em><span> | </span><em><span>PrevisÃ£o de ConclusÃ£o: Julho/2021</span></em></p><h3><a name="bacharel-em-engenharia-elÃ©trica" class="md-header-anchor"></a><span>Bacharel em Engenharia ElÃ©trica</span></h3><p><em><span>Centro UniversitÃ¡rio IngÃ¡ - UningÃ¡ - MaringÃ¡</span></em><span> | </span><em><span>ConclusÃ£o: Dezembro/2019</span></em></p><h3><a name="curso-tÃ©cnico-em-mecatrÃ´nica" class="md-header-anchor"></a><span>Curso TÃ©cnico em MecatrÃ´nica</span></h3><p><em><span>SENAI - CTM - MaringÃ¡</span></em><span> | </span><em><span>ConclusÃ£o: Novembro/2014</span></em></p><hr /><h2><a name="experiÃªncia-profissional" class="md-header-anchor"></a><span>EXPERIÃNCIA PROFISSIONAL</span></h2><h3><a name="analista-de-negÃ³cios" class="md-header-anchor"></a><span>Analista de NegÃ³cios</span></h3><h4><a name="db1-group--agosto2018-atÃ©-o-momento" class="md-header-anchor"></a><span>DB1 Group | Agosto/2018 atÃ© o momento</span></h4><p><strong><span>Principais atividades:</span></strong><span> Definir e validar soluÃ§Ãµes que satisfaÃ§am as necessidades de negÃ³cio, metas e objetivos do cliente e empresa; elicitaÃ§Ã£o e gerenciamento de requisitos; avaliaÃ§Ã£o e validaÃ§Ã£o da soluÃ§Ã£o.</span></p><p>&nbsp;</p><h3><a name="tÃ©cnica-em-eletrÃ´nica" class="md-header-anchor"></a><span>TÃ©cnica em EletrÃ´nica</span></h3><h4><a name="digipower-chip-performance--junho2017-a-agosto2018" class="md-header-anchor"></a><span>Digipower Chip Performance | Junho/2017 a Agosto/2018</span></h4><p><strong><span>Principais atividades:</span></strong><span> AtualizaÃ§Ã£o e desenvolvimento de produtos de performance automotiva; auxiliar de produÃ§Ã£o; contato com fornecedores; elicitaÃ§Ã£o de requisitos para aplicativos mobile; gerenciamento de projetos; testes de aplicativos mobile.</span></p><p>&nbsp;</p><h3><a name="auxiliar-de-escritÃ³rio" class="md-header-anchor"></a><span>Auxiliar de EscritÃ³rio</span></h3><h4><a name="eugenio--marques-ltda--nov2013-a-fev2017" class="md-header-anchor"></a><span>Eugenio &amp; Marques LTDA | Nov/2013 a Fev/2017</span></h4><p><strong><span>Principais atividades:</span></strong><span> BalanÃ§o patrimonial, orÃ§amentos, organizaÃ§Ã£o de agenda e contato com clientes.</span></p><hr /><h2><a name="idiomas" class="md-header-anchor"></a><span>IDIOMAS</span></h2><p><strong><span>PortuguÃªs</span></strong><span>| Nativo</span></p><p><strong><span>InglÃªs</span></strong><span> | Fluente</span></p><p><strong><span>Espanhol</span></strong><span>| BÃ¡sico</span></p><hr /><h2><a name="certificaÃ§Ãµes" class="md-header-anchor"></a><span>CERTIFICAÃÃES</span></h2><h3><a name="scrum-foundation-professional-certificate---sfpc" class="md-header-anchor"></a><span>Scrum Foundation Professional Certificate - SFPC</span></h3><p><span>EmissÃ£o: Junho/2020</span></p><p><span>Credencial: FLCBPSLLDP-SSGRKKGL-WHKNWDKTQZ</span></p><p>&nbsp;</p><h3><a name="scrum-fundamentals-certified" class="md-header-anchor"></a><span>Scrum Fundamentals Certified</span></h3><p><span>EmissÃ£o: Maio/2020</span></p><p><span>Credencial: 779360</span></p><hr /><h2><a name="cursos" class="md-header-anchor"></a><span>Cursos</span></h2><h3><a name="workshop-desing-sprint-com-estruturas-libertadoras" class="md-header-anchor"></a><span>Workshop Desing Sprint com Estruturas Libertadoras</span></h3><p><span>Carga horÃ¡ria: 10h</span></p><p><span>ConclusÃ£o: Maio/2020</span></p><p>&nbsp;</p><h3><a name="user-experience--uniritter" class="md-header-anchor"></a><span>User Experience | UniRitter</span></h3><p><span>Carga horÃ¡ria: 24h</span></p><p><span>ConclusÃ£o: MarÃ§o/2020</span></p><p>&nbsp;</p><h3><a name="engenharia-de-requisitos--puc-minas" class="md-header-anchor"></a><span>Engenharia de Requisitos | PUC Minas</span></h3><p><span>Carga HorÃ¡ria: 10h</span></p><p><span>ConclusÃ£o: MarÃ§o/2020</span></p><p>&nbsp;</p><h3><a name="workshop-lean-inception--caroliorg" class="md-header-anchor"></a><span>Workshop Lean Inception | Caroli.org</span></h3><p><span>Carga horÃ¡ria: 8h</span></p><p><span>ConclusÃ£o: Maio/2019</span></p><p>&nbsp;</p><h3><a name="agilista--alura" class="md-header-anchor"></a><span>Agilista | Alura</span></h3><p><span>Carga HorÃ¡ria: 40h</span></p><p><span>ConclusÃ£o: Setembro/2018</span></p><p><span> </span></p><h3><a name="desing-thinking--alura" class="md-header-anchor"></a><span>Desing Thinking | Alura</span></h3><p><span>Carga horÃ¡ria: 30h</span></p><p><span>ConcluÃ£o: setembro/2018</span></p><p>&nbsp;</p><p>&nbsp;</p></div>
 </body>
 </html>
